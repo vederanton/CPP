@@ -1,6 +1,6 @@
 // Homework11_04.cpp : Defines the entry point for the console application.
-// 4. Дан файл input_2.txt, в котором содержится текст. Нужно сосчитать, сколько раз в этом тексте 
-// встречается буква «а», и записать результат в файл res_input_5.txt.
+// 4. Р”Р°РЅ С„Р°Р№Р» input_2.txt, РІ РєРѕС‚РѕСЂРѕРј СЃРѕРґРµСЂР¶РёС‚СЃСЏ С‚РµРєСЃС‚. РќСѓР¶РЅРѕ СЃРѕСЃС‡РёС‚Р°С‚СЊ, СЃРєРѕР»СЊРєРѕ СЂР°Р· РІ СЌС‚РѕРј С‚РµРєСЃС‚Рµ 
+// РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ Р±СѓРєРІР° В«Р°В», Рё Р·Р°РїРёСЃР°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РІ С„Р°Р№Р» res_input_5.txt.
 
 #include "stdafx.h"
 #include <iostream>
@@ -27,7 +27,7 @@ void readyFile(const std::string& path, std::vector<char>& arr) {
 int countLetterA(std::vector<char>& arr) {
 	int count = 0;
 	for (int i = 0; i < arr.size(); ++i) {
-		if (arr[i] == 'а' || arr[i] == 'А') {
+		if (arr[i] == 'Р°' || arr[i] == 'Рђ') {
 			++count;
 		}
 	}
@@ -38,7 +38,7 @@ int countLetterA(std::vector<char>& arr) {
 void writeFile(const std::string& path, const int& count) {
 	std::ofstream output;
 	output.open(path);
-	output << "Количество символов 'а' или 'А' равно: " << count << '\n';
+	output << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ 'Р°' РёР»Рё 'Рђ' СЂР°РІРЅРѕ: " << count << '\n';
 	output.close();
 }
 
