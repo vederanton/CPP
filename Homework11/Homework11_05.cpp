@@ -1,7 +1,7 @@
 // Homework11_05.cpp : Defines the entry point for the console application.
-// 5. Дан файл input_2.txt, в котором содержится текст. Нужно сосчитать, сколько раз в каждой строчке этого файла 
-// встречается буква «а», и записать результат в файл res_input_6.txt.
-// Формат вывода : номер строчки – количество букв «а» в ней.
+// 5. Р”Р°РЅ С„Р°Р№Р» input_2.txt, РІ РєРѕС‚РѕСЂРѕРј СЃРѕРґРµСЂР¶РёС‚СЃСЏ С‚РµРєСЃС‚. РќСѓР¶РЅРѕ СЃРѕСЃС‡РёС‚Р°С‚СЊ, СЃРєРѕР»СЊРєРѕ СЂР°Р· РІ РєР°Р¶РґРѕР№ СЃС‚СЂРѕС‡РєРµ СЌС‚РѕРіРѕ С„Р°Р№Р»Р° 
+// РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ Р±СѓРєРІР° В«Р°В», Рё Р·Р°РїРёСЃР°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РІ С„Р°Р№Р» res_input_6.txt.
+// Р¤РѕСЂРјР°С‚ РІС‹РІРѕРґР° : РЅРѕРјРµСЂ СЃС‚СЂРѕС‡РєРё вЂ“ РєРѕР»РёС‡РµСЃС‚РІРѕ Р±СѓРєРІ В«Р°В» РІ РЅРµР№.
 
 #include "stdafx.h"
 #include <iostream>
@@ -19,7 +19,7 @@ void readyFile(const std::string& path, std::vector<std::string>& arr) {
 	}
 	std::string words;
 	while (std::getline(input, words)) {
-		arr.push_back(words); // Создаем вектор строк.
+		arr.push_back(words); // РЎРѕР·РґР°РµРј РІРµРєС‚РѕСЂ СЃС‚СЂРѕРє.
 	}
 	input.close();
 }
@@ -29,14 +29,14 @@ void countLetterA(const std::vector<std::string>& arr, std::vector<int>& symbCou
 	std::string line;
 	int count;
 	for (int i = 0; i < arr.size(); ++i) {
-		line = arr[i]; // Записываем в строку каждый последующий элемент вектора строк.
+		line = arr[i]; // Р—Р°РїРёСЃС‹РІР°РµРј РІ СЃС‚СЂРѕРєСѓ РєР°Р¶РґС‹Р№ РїРѕСЃР»РµРґСѓСЋС‰РёР№ СЌР»РµРјРµРЅС‚ РІРµРєС‚РѕСЂР° СЃС‚СЂРѕРє.
 		count = 0;
 		for (int j = 0; j < line.length(); ++j) {
-			if (line[j] == 'а' || line[j] == 'А') {
-				++count; // Считаем количество букв в строке.
+			if (line[j] == 'Р°' || line[j] == 'Рђ') {
+				++count; // РЎС‡РёС‚Р°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ Р±СѓРєРІ РІ СЃС‚СЂРѕРєРµ.
 			}
 		}
-		symbCount.push_back(count); // Добавляем количество букв в новый вектор.
+		symbCount.push_back(count); // Р”РѕР±Р°РІР»СЏРµРј РєРѕР»РёС‡РµСЃС‚РІРѕ Р±СѓРєРІ РІ РЅРѕРІС‹Р№ РІРµРєС‚РѕСЂ.
 	}
 }
 
@@ -44,9 +44,9 @@ void countLetterA(const std::vector<std::string>& arr, std::vector<int>& symbCou
 void writeFile(const std::string& path, const std::vector<int>& symbCount) {
 	std::ofstream output;
 	output.open(path);
-	output << "Букв 'а' или 'А' в строках:" << '\n';
+	output << "Р‘СѓРєРІ 'Р°' РёР»Рё 'Рђ' РІ СЃС‚СЂРѕРєР°С…:" << '\n';
 	for (int i = 0; i < symbCount.size(); ++i) {
-		output << "Строка " << i + 1 << ": " << symbCount[i] << '\n'; // И выводим этот вектор.
+		output << "РЎС‚СЂРѕРєР° " << i + 1 << ": " << symbCount[i] << '\n'; // Р РІС‹РІРѕРґРёРј СЌС‚РѕС‚ РІРµРєС‚РѕСЂ.
 	}
 	output.close();
 }
@@ -67,4 +67,3 @@ int main() {
 
 	return 0;
 }
-
