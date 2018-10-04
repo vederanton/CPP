@@ -46,8 +46,6 @@ void writeFile(const std::string& path, std::vector<std::string>& arr) {
 
 
 int main() {
-	setlocale(LC_ALL, "Russian");
-
 	std::string filename_input = "input_2.txt";
 	std::vector<std::string> arr;
 	readyFile(filename_input, arr);
