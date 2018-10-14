@@ -18,8 +18,7 @@
 int main() {
 	setlocale(LC_ALL, "Russian");
 
-	std::map<int, int> myMap = { {1, 1}, {2, 4}, {3, 9}, {4, 16}, {5, 25}, 
-							     {6, 36}, {7, 49}, {8, 64}, {9, 81} };
+	std::map<int, int> myMap = { {1, 1}, {2, 4}, {3, 9}, {4, 16}, {5, 25}, {6, 36}, {7, 49}, {8, 64}, {9, 81} };
 
 	for (auto it = myMap.begin(); it != myMap.end(); ++it) {
 		std::cout << it->first << " = > " << it->second << std::endl;
@@ -55,3 +54,4 @@ int main() {
 	
     return 0;
 }
+
