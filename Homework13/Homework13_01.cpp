@@ -1,11 +1,11 @@
 // Homework13_01.cpp : Defines the entry point for the console application.
-/* Задание 2
-Дан файл 2_input.txt, в котором содержатся строки, состоящие из букв и цифр.
-а) Подсчитайте, сколько во входном файле разных символов.
-б) Выведите частотную таблицу разных символов в формате «символ – табуляция – количество». 
-Результаты выведите в файл result.txt.
-в) Напишите функцию, которая найдет в файле все цифровые подпоследовательности и будет быстро проверять, 
-есть ли среди них подпоследовательность, введенная пользователем. */
+/* Р—Р°РґР°РЅРёРµ 2
+Р”Р°РЅ С„Р°Р№Р» 2_input.txt, РІ РєРѕС‚РѕСЂРѕРј СЃРѕРґРµСЂР¶Р°С‚СЃСЏ СЃС‚СЂРѕРєРё, СЃРѕСЃС‚РѕСЏС‰РёРµ РёР· Р±СѓРєРІ Рё С†РёС„СЂ.
+Р°) РџРѕРґСЃС‡РёС‚Р°Р№С‚Рµ, СЃРєРѕР»СЊРєРѕ РІРѕ РІС…РѕРґРЅРѕРј С„Р°Р№Р»Рµ СЂР°Р·РЅС‹С… СЃРёРјРІРѕР»РѕРІ.
+Р±) Р’С‹РІРµРґРёС‚Рµ С‡Р°СЃС‚РѕС‚РЅСѓСЋ С‚Р°Р±Р»РёС†Сѓ СЂР°Р·РЅС‹С… СЃРёРјРІРѕР»РѕРІ РІ С„РѕСЂРјР°С‚Рµ В«СЃРёРјРІРѕР» вЂ“ С‚Р°Р±СѓР»СЏС†РёСЏ вЂ“ РєРѕР»РёС‡РµСЃС‚РІРѕВ». 
+Р РµР·СѓР»СЊС‚Р°С‚С‹ РІС‹РІРµРґРёС‚Рµ РІ С„Р°Р№Р» result.txt.
+РІ) РќР°РїРёС€РёС‚Рµ С„СѓРЅРєС†РёСЋ, РєРѕС‚РѕСЂР°СЏ РЅР°Р№РґРµС‚ РІ С„Р°Р№Р»Рµ РІСЃРµ С†РёС„СЂРѕРІС‹Рµ РїРѕРґРїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё Рё Р±СѓРґРµС‚ Р±С‹СЃС‚СЂРѕ РїСЂРѕРІРµСЂСЏС‚СЊ, 
+РµСЃС‚СЊ Р»Рё СЃСЂРµРґРё РЅРёС… РїРѕРґРїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ, РІРІРµРґРµРЅРЅР°СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј. */
 
 #include "stdafx.h"
 #include <iostream>
@@ -16,7 +16,7 @@
 #include <vector>
 
 
-void readFile(std::string& path, std::set<char>& mySet) { // для пункта а)
+void readFile(std::string& path, std::set<char>& mySet) { // РґР»СЏ РїСѓРЅРєС‚Р° Р°)
 	std::ifstream input;
 	input.open(path);
 	if (!input.is_open()) {
@@ -30,7 +30,7 @@ void readFile(std::string& path, std::set<char>& mySet) { // для пункта а)
 }
 
 
-void readFile2(std::string& path, std::map<char, int>& myMap) { // для пункта б)
+void readFile2(std::string& path, std::map<char, int>& myMap) { // РґР»СЏ РїСѓРЅРєС‚Р° Р±)
 	std::ifstream input;
 	input.open(path);
 	if (!input.is_open()) {
@@ -59,7 +59,7 @@ void writeFile2(std::string& path, std::map<char, int>& myMap) {
 }
 
 
-void readFile3(std::string& path, std::set<std::string>& mySet) { // для пункта в)
+void readFile3(std::string& path, std::set<std::string>& mySet) { // РґР»СЏ РїСѓРЅРєС‚Р° РІ)
 	std::ifstream input;
 	input.open(path);
 	if (!input.is_open()) {
@@ -88,7 +88,7 @@ int main() {
 	std::string fileName = "2_input.txt";
 	std::set<char> mySet;
 	readFile(fileName, mySet);
-	std::cout << "В файле " << mySet.size() << " разных символов." << std::endl;
+	std::cout << "Р’ С„Р°Р№Р»Рµ " << mySet.size() << " СЂР°Р·РЅС‹С… СЃРёРјРІРѕР»РѕРІ." << std::endl;
 	mySet.clear();
 
 	std::map<char, int> myMap;
@@ -99,14 +99,14 @@ int main() {
 
 	std::set<std::string> mySetStr;
 	readFile3(fileName, mySetStr);
-	std::cout << "Введите цифровую подпоследовательность: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ С†РёС„СЂРѕРІСѓСЋ РїРѕРґРїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ: ";
 	std::string numberCount = "";
 	std::cin >> numberCount;
 	if (mySetStr.count(numberCount)) {
-		std::cout << "В файле есть данная подпоследовательность!" << std::endl;
+		std::cout << "Р’ С„Р°Р№Р»Рµ РµСЃС‚СЊ РґР°РЅРЅР°СЏ РїРѕРґРїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ!" << std::endl;
 	}
 	else {
-		std::cout << "В файле нет данной подпоследовательности!" << std::endl;
+		std::cout << "Р’ С„Р°Р№Р»Рµ РЅРµС‚ РґР°РЅРЅРѕР№ РїРѕРґРїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё!" << std::endl;
 	}
 
     return 0;
