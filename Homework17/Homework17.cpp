@@ -1,4 +1,4 @@
-// 01-12-2018_Homework.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Homework17.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include "pch.h"
