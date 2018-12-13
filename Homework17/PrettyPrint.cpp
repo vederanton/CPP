@@ -4,13 +4,13 @@
 
 PrettyPrint::PrettyPrint() {}
 
-std::string PrettyPrint::concString(const std::string a, const std::string b) const { // конкатенация 2 строк с точкой между ними.
+std::string PrettyPrint::concString(const std::string a, const std::string b) const { // РєРѕРЅРєР°С‚РµРЅР°С†РёСЏ 2 СЃС‚СЂРѕРє СЃ С‚РѕС‡РєРѕР№ РјРµР¶РґСѓ РЅРёРјРё.
 	std::string concatStr = a;
 	concatStr.append(".").append(b);
 	return concatStr;
 }
 
-std::string PrettyPrint::replaceAO(std::string a) const { // замена символов а на о.
+std::string PrettyPrint::replaceAO(std::string a) const { // Р·Р°РјРµРЅР° СЃРёРјРІРѕР»РѕРІ Р° РЅР° Рѕ.
 	std::string tmp = "";
 	for (int i = 0; i < a.length(); ++i) {
 		if (a[i] == 'a') {
@@ -25,7 +25,7 @@ std::string PrettyPrint::replaceAO(std::string a) const { // замена символов а н
 	return a;
 }
 
-std::string PrettyPrint::upend(std::string a) const { // перевертывание строки.
+std::string PrettyPrint::upend(std::string a) const { // РїРµСЂРµРІРµСЂС‚С‹РІР°РЅРёРµ СЃС‚СЂРѕРєРё.
 	std::string tmp;
 	for (int i = a.length() - 1; i >= 0; --i) {
 		tmp += a[i];
