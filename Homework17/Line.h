@@ -31,10 +31,10 @@ public:
 };
 
 inline bool checkIntersection(const Line a, const Line b) {
-	return a.getK() == b.getK() && a.getB() != b.getB() ? 0 : 1; // пересекаются ли прямые, 1-да, 0-нет.
+	return a.getK() == b.getK() && a.getB() != b.getB() ? 0 : 1; // РїРµСЂРµСЃРµРєР°СЋС‚СЃСЏ Р»Рё РїСЂСЏРјС‹Рµ, 1-РґР°, 0-РЅРµС‚.
 }
 
-inline Point calcIntersection(const Line a, const Line b) { // точка пересечения 2 пересекающихся прямых.
+inline Point calcIntersection(const Line a, const Line b) { // С‚РѕС‡РєР° РїРµСЂРµСЃРµС‡РµРЅРёСЏ 2 РїРµСЂРµСЃРµРєР°СЋС‰РёС…СЃСЏ РїСЂСЏРјС‹С….
 	Point point;
 	point.x = (a.getB() - b.getB()) / (b.getK() - a.getK());
 	point.y = (b.getK() * a.getB() - a.getK() * b.getB()) / (b.getK() - a.getK());
