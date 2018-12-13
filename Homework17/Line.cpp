@@ -50,11 +50,11 @@ int Line::getCountNowLines() {
 }
 
 bool Line::checkPointLine(const Point point) const {
-	return k * point.x + b == point.y ? 1 : 0; // лежит ли точка на прямой, 1-лежит, 0-нет.
+	return k * point.x + b == point.y ? 1 : 0; // Р»РµР¶РёС‚ Р»Рё С‚РѕС‡РєР° РЅР° РїСЂСЏРјРѕР№, 1-Р»РµР¶РёС‚, 0-РЅРµС‚.
 }
 
 bool Line::checkPointLine(const float x, const float y) const {
-	return k * x + b == y ? 1 : 0; // лежит ли точка на прямой, 1-лежит, 0-нет.
+	return k * x + b == y ? 1 : 0; // Р»РµР¶РёС‚ Р»Рё С‚РѕС‡РєР° РЅР° РїСЂСЏРјРѕР№, 1-Р»РµР¶РёС‚, 0-РЅРµС‚.
 }
 
 int Line::checkPointPosition(const Point point) const {
