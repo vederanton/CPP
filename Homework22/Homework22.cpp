@@ -5,7 +5,7 @@
 #include <iostream>
 #include "Polygon.h"
 
-std::ostream& operator<<(std::ostream& os, const Polygon& obj) { // почему-то в .h и в .cpp не работает.
+std::ostream& operator<<(std::ostream& os, const Polygon& obj) { // РїРѕС‡РµРјСѓ-С‚Рѕ РІ .h Рё РІ .cpp РЅРµ СЂР°Р±РѕС‚Р°РµС‚.
 	os << "Number of angles: " << obj.getSizePolygon_() << std::endl;
 	os << "Regular: " << obj.isRegular() << std::endl;
 	os << "The sum of the lengths of all sides: " << obj.calculateSides() << std::endl;
