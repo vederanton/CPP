@@ -103,17 +103,17 @@ void Polygon::movePoligon_(const double x, const double y) {
 
 double Polygon::lengthSide(Coordinate one, Coordinate two) const {
 	double xDiff, yDiff, lengthSide;
-	xDiff = fabs(two.x_ - one.x_); // определяем катет по Х с положительным знаком
-	yDiff = fabs(two.y_ - one.y_); // определяем катет по У положительным знаком
+	xDiff = fabs(two.x_ - one.x_); // РѕРїСЂРµРґРµР»СЏРµРј РєР°С‚РµС‚ РїРѕ РҐ СЃ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј Р·РЅР°РєРѕРј
+	yDiff = fabs(two.y_ - one.y_); // РѕРїСЂРµРґРµР»СЏРµРј РєР°С‚РµС‚ РїРѕ РЈ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј Р·РЅР°РєРѕРј
 	return lengthSide = sqrt(pow(xDiff, 2) + pow(yDiff, 2));
 }
 
-double Polygon::calculateSides() const { // сумма длин всех сторон
+double Polygon::calculateSides() const { // СЃСѓРјРјР° РґР»РёРЅ РІСЃРµС… СЃС‚РѕСЂРѕРЅ
 	double sumSides = 0;
-	for (auto it = polygon_.begin(); it != polygon_.end() - 1; ++it) { // сумма сторон для всех сторон кроме последней
+	for (auto it = polygon_.begin(); it != polygon_.end() - 1; ++it) { // СЃСѓРјРјР° СЃС‚РѕСЂРѕРЅ РґР»СЏ РІСЃРµС… СЃС‚РѕСЂРѕРЅ РєСЂРѕРјРµ РїРѕСЃР»РµРґРЅРµР№
 		sumSides += lengthSide(*it, *(it + 1));
 	}
-	return sumSides += lengthSide(polygon_[0], polygon_[polygon_.size() - 1]); // прибавляем последнюю
+	return sumSides += lengthSide(polygon_[0], polygon_[polygon_.size() - 1]); // РїСЂРёР±Р°РІР»СЏРµРј РїРѕСЃР»РµРґРЅСЋСЋ
 }
 
 double Polygon::calculateAverageSide() const {
