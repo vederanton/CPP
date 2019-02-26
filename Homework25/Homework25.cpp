@@ -1,6 +1,5 @@
 // #25 homework
 
-
 #include "pch.h"
 #include <iostream>
 #include <memory>
@@ -9,14 +8,12 @@
 
 # define M_PI 3.14159265358979323846
 
-
 class Shape {
 public:
 	virtual ~Shape() {}
 	virtual double getArea() = 0;
 	virtual void draw() = 0;
 };
-
 
 class Point {
 	double x_;
@@ -36,7 +33,6 @@ public:
 		return y_;
 	}
 };
-
 
 class Triangle : public Shape {
 	Point triangleA_;
@@ -63,7 +59,6 @@ public:
 	}
 };
 
-
 class Rectangle : public Shape {
 	Point RectangleA_;
 	Point RectangleB_;
@@ -85,7 +80,6 @@ public:
 		std::cout << "The area is: " << getArea() << std::endl;
 	}
 };
-
 
 class Ellipse : public Shape {
 	Point EllipseA_;
@@ -116,7 +110,6 @@ public:
 	}
 };
 
-
 class Circle : public Shape {
 	Point CircleA_;
 	Point CircleCenter_;
@@ -140,13 +133,11 @@ public:
 	}
 };
 
-
 void drawShapes(std::vector<std::shared_ptr<Shape>>& shapes) {
 	for (size_t i = 0; i < shapes.size(); ++i) {
 		shapes[i]->draw();
 	}
 }
-
 
 double getShapesArea(std::vector<std::shared_ptr<Shape>>& shapes) {
 	double sumAreas = 0;
@@ -155,7 +146,6 @@ double getShapesArea(std::vector<std::shared_ptr<Shape>>& shapes) {
 	}
 	return sumAreas;
 }
-
 
 int main() {
 	Point p1(21.20, 93.12);
