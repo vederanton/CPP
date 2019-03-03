@@ -8,8 +8,8 @@ const int CAPACITY_DEF = 32;
 
 template <class T>
 class Queue {
-	size_t capacity = CAPACITY_DEF;	// размер динамич памяти
-	int tail = -1;	// индекс последнего элемента
+	size_t capacity = CAPACITY_DEF;
+	int tail = -1;	// index of the last element
 	T* data = nullptr;
 public:
 	Queue();
