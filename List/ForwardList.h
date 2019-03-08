@@ -1,8 +1,5 @@
 #pragma once
-#include "pch.h"
 #include <iostream>
-#include "List_Test.h"
-#include <exception>
 
 template <typename T>
 struct node {
